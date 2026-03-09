@@ -1,3 +1,9 @@
+!!! tip
+
+    Thank you for visiting the Smart Contract Security Best Practices. Please note that this resource is no longer actively maintained. Instead, we recommend visiting the [Smart Contract Security Field Guide](https://scsfg.io/). The Field Guide is regularly updated and curated by the same security engineer who previously contributed to the Best Practices guide.
+
+    The resource on griefing attacks can be found here: https://scsfg.io/hackers/griefing/
+
 This attack may be possible on a contract which accepts generic data and uses it to make a call
 another contract (a 'sub-call') via the low level `address.call()` function, as is often the case
 with multisignature and transaction relayer contracts.
@@ -59,3 +65,4 @@ contract Executor {
 ```
 
 Another solution is to permit only trusted accounts to relay the transaction.
+

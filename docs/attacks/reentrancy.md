@@ -1,3 +1,10 @@
+!!! tip
+
+    Thank you for visiting the Smart Contract Security Best Practices. Please note that this resource is no longer actively maintained. Instead, we recommend visiting the [Smart Contract Security Field Guide](https://scsfg.io/). The Field Guide is regularly updated and curated by the same security engineer who previously contributed to the Best Practices guide.
+
+    The resource on reentrancy can be found here: https://scsfg.io/hackers/reentrancy/
+
+
 One of the major dangers of [calling external contracts](../development-recommendations/general/external-calls.md) is that
 they can take over the control flow, and make changes to your data that the calling function wasn't
 expecting. This class of bugs can take many forms, and both of the major bugs that led to the DAO's
@@ -29,9 +36,11 @@ invocations will still succeed and will withdraw the balance over and over again
     decision-making apparatus of an organization, eliminating the need for documents and people in
     governing, creating a structure with decentralized control.
 
-
+```
 On June 17th 2016, [The DAO](https://www.coindesk.com/understanding-dao-hack-journalists) was hacked and 3.6 million Ether ($50 Million) were stolen using the first reentrancy attack.
+
 Ethereum Foundation issued a critical update to rollback the hack. This resulted in Ethereum being forked into Ethereum Classic and Ethereum.
+```
 
 In the example given, the best way to prevent this attack is to make sure you don't call an
 external function until you've done all the internal work you need to do:
@@ -169,7 +178,7 @@ function withdraw(uint amount) payable public returns (bool) {
     require(!lockBalances && amount > 0 && balances[msg.sender] >= amount);
     lockBalances = true;
 
-    (bool success, ) = msg.sender.call.value(amount)("");
+    (bool success, ) = msg.sender.call(amount)("");
 
     if (success) { // Normally insecure, but the mutex saves it
       balances[msg.sender] -= amount;

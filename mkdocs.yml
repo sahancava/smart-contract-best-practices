@@ -138,7 +138,7 @@ extra:
       link: https://www.youtube.com/channel/UCkoGLA5DUdXO4Qfo_9RDjIA/playlists
   analytics:
     provider: google
-    property: UA-64552723-12
+    property: G-VYGQ8GTH45
 
 markdown_extensions:
   - toc:

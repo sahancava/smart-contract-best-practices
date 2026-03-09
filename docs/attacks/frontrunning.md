@@ -1,3 +1,9 @@
+!!! tip
+
+    Thank you for visiting the Smart Contract Security Best Practices. Please note that this resource is no longer actively maintained. Instead, we recommend visiting the [Smart Contract Security Field Guide](https://scsfg.io/). The Field Guide is regularly updated and curated by the same security engineer who previously contributed to the Best Practices guide.
+    
+    The resource on frontrunning attacks can be found here: https://scsfg.io/hackers/frontrunning/
+
 Since all transactions are visible in the mempool for a short while before being executed,
 observers of the network can see and react to an action before it is included in a block. An
 example of how this can be exploited is with a decentralized exchange where a buy order transaction
@@ -107,3 +113,4 @@ reveal the data and verify it against the hash in the second transaction. Howeve
 transaction itself leaks the intention and possibly the value of the collateralization. There are
 enhanced commit and reveal schemes that are more secure, however require more transactions to
 function, e.g. [submarine sends](https://libsubmarine.org/).
+

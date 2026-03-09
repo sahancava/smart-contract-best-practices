@@ -1,3 +1,10 @@
+!!! tip
+
+    Thank you for visiting the Smart Contract Security Best Practices. Please note that this resource is no longer actively maintained. Instead, we recommend visiting the [Smart Contract Security Field Guide](https://scsfg.io/). The Field Guide is regularly updated and curated by the same security engineer who previously contributed to the Best Practices guide.
+
+    The resource on unexpected Ether transfers can be found here: https://scsfg.io/hackers/unexpected-ether/
+
+
 Forcing a smart contract to hold an Ether balance can influence its internal accounting and security assumptions.
 There are multiple ways a smart contract can receive Ether. The hierarchy is as follows:
 
